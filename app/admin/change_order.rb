@@ -11,6 +11,21 @@ ActiveAdmin.register ChangeOrder do
       f.input :discovery
       f.input :value
       f.input :tstv_estimate
+      f.input :sub_proposal_num
+      f.input :status
+      f.input :pco_filter
+      f.input :type
+      f.input :al_num
+      f.input :ddc_co_num
+      f.input :sub_co_num
+      f.input :approximate
+      f.input :pending
+      f.input :approved
+      f.input :sub_proposed_value
+      f.input :df_submitted
+      f.input :df_approved
+      f.input :sent_to_ddc
+      f.input :ddc_approved
     end
     f.actions
   end

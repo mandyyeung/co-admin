@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150126000429) do
+ActiveRecord::Schema.define(version: 20150128040328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,8 +39,23 @@ ActiveRecord::Schema.define(version: 20150126000429) do
     t.decimal  "value"
     t.decimal  "tstv_estimate"
     t.integer  "subcontractor_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "sub_proposal_num"
+    t.string   "status"
+    t.string   "pco_filter"
+    t.string   "type"
+    t.decimal  "al_num"
+    t.decimal  "ddc_co_num"
+    t.decimal  "sub_co_num"
+    t.decimal  "approximate"
+    t.decimal  "pending"
+    t.decimal  "approved"
+    t.decimal  "sub_proposed_value"
+    t.date     "df_submitted"
+    t.date     "df_approved"
+    t.date     "sent_to_ddc"
+    t.date     "ddc_approved"
   end
 
   add_index "change_orders", ["subcontractor_id"], name: "index_change_orders_on_subcontractor_id", using: :btree
